@@ -1,0 +1,10 @@
+{{> header}}
+<body>
+    {{> nav}} {{!-- its like @section in laravel but in laravel remember we have to use @extends('app.layout') --}}
+    <h1>{{pageTitle}}</h1>
+    {{!-- screamIt is a helper (function) but we dont run it like screamIt(args) but we run it with space to put the arguments --}}
+    <p>{{screamIt welcomeMessage}}</p>
+
+    {{> footer}}
+</body>
+</html>
