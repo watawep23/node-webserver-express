@@ -3,6 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 const app = express();
 
 hbs.registerPartials(__dirname + '/views/partials'); // register our partial files like footer, header, etc...
@@ -59,6 +60,6 @@ app.get('/bad', (req, res) => {
 });
 
 // second parameter of listen is a function we want to run when the server is ready to go
-app.listen(3000, () => {
-    console.log('server is up');
+app.listen(port, () => {
+    console.log('server is up on port ' + port);
 });
