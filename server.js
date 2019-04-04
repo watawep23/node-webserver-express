@@ -3,10 +3,10 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; // kapag naka up na yung app naten sa server, yung port ng server ang gagamitin, pero kapag hindi. yung local naten.
 const app = express();
 
-hbs.registerPartials(__dirname + '/views/partials'); // register our partial files like footer, header, etc...
+hbs.registerPartials(__dirname + '/views/partials'); // register our partial files like footer, header, etc... so we cna use it in view {{> header}}
 app.set('view engine', 'hbs'); // set() is used to set some various express related configuration set('key', 'value')
 
 // creating our custom middleware. middlewares will fire for every request
